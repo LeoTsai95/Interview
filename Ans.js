@@ -22,18 +22,24 @@ const data = [
 
 ]
 
+// 第一題
+// 
 const getdata = data.some(function (fish) {
     return fish.name === '鱈魚'
 })
 
 console.log(getdata);
 
-
+// 第二題
+// 
 const getprice = data.every(function (price) {
     return price.price <= 2000
 })
 console.log(getprice);
 
+
+// 第三題
+// 
 const getLow90 = data.filter(function (fish) {
     return fish.price < 70
 })
@@ -46,7 +52,8 @@ const name = getLow90.map(function (seaFood) {
 console.log(name);
 
 
-
+// 第四題
+// 
 const notFish = data.filter(function (fish) {
     return !fish.name.includes('魚')
 })
@@ -61,7 +68,8 @@ const getlPrice = data.filter(function (item) {
 
 // console.log(getlPrice);
 
-
+// 第五題
+// 
 const totalPrice = getlPrice.reduce(function(sum,item) {
     return sum += item.price
 },0)
